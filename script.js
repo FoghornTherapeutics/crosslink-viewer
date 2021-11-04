@@ -105,8 +105,9 @@
             // add path where it concatenates "./demo/data/" + file name as a string
             globalConfig.forEach(d => {
                 d.path = "./demo/data/" + d.file + ".csv";
-                d.path_customAnnot = "./demo/data/" + d.customAnnot + ".csv";
-                });
+                if (d.annot){
+                    d.customAnnot = "./demo/data/" + d.annot + ".csv";}
+;                });
 
             // create an array of the display_name to display in the dropdown menu
             const uniqueDisplay_name = Array.from(config.map(d => d.display_name)).sort();

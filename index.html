@@ -123,9 +123,9 @@
 
 					<!-- Droopdown with submit button-->
 					<div class='row'>
-					<select class="btn btn-1 btn-1a" id="dataSets"   ></select>  
+					<select class="btn btn-1 btn-1a" id="dataSets"  onchange="loadData(globalConfig);" ></select>  
 					<!-- onchange="loadData(globalConfig);" -->
-					<input class="btn btn-1 btn-1a" type="submit" name="options" id="" autocomplete="off" checked onclick="loadData(globalConfig);">
+					<!-- <input class="btn btn-1 btn-1a" type="submit" name="options" id="" autocomplete="off" checked onclick="loadData(globalConfig);"> -->
 					</div>
 
 						  <button class="btn btn-1 btn-1a network-control resetzoom" onclick="xlv.reset();">
