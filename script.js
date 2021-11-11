@@ -96,7 +96,7 @@
     var globalConfig = null;
 		  
 		  
-        var path_metadata = "./demo/data/metadata.csv";
+        var path_metadata = "./crosslink_viewer_data/crosslink_viewer_metadata.csv";
 
         d3.csv(path_metadata, function(config) {
             globalConfig = config;
@@ -104,9 +104,9 @@
 
             // add path where it concatenates "./demo/data/" + file name as a string
             globalConfig.forEach(d => {
-                d.path = "./demo/data/" + d.file + ".csv";
+                d.path = "./crosslink_viewer_data/individual_experiment_data/" + d.file + ".csv";
                 if (d.annot){
-                    d.customAnnot = "./demo/data/" + d.annot + ".csv";}
+                    d.customAnnot = "./crosslink_viewer_data/individual_experiment_data/" + d.annot + ".csv";}
 ;                });
 
             // create an array of the display_name to display in the dropdown menu
